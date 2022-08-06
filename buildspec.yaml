@@ -16,6 +16,7 @@ phases:
     - echo $IMAGE_URI
     - mvn clean package -Ddockerfile.skip
     - docker build -t $IMAGE_URI .
+    - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
   post_build:
     commands:
     - printenv

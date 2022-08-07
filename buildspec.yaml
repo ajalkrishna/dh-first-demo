@@ -15,14 +15,14 @@ phases:
     - echo $IMAGE_URI
     - mvn clean package -Ddockerfile.skip
     - docker build -t $IMAGE_URI .
-    - docker tag $REPOSITORY_URI $REPOSITORY_URI
+    - docker tag $IMAGE_URI $REPOSITORY_URI
   post_build:
     commands:
     - printenv
     - echo Build completed on `date`
     - echo $(docker images)
     - echo Pushing docker image
-    - docker push $IMAGE_URI
+    - docker push $REPOSITORY_URI
     - echo push completed
     - printf '[{"name":"%s","imageUri":"%s"}]' $CONTAINER_NAME $IMAGE_URI > imagedefinitions.json
 artifacts:

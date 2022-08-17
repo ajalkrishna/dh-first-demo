@@ -3,8 +3,8 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:us-west-2:860061945305:task-definition/docker-demo:1"
+        TaskDefinition: "arn:aws:ecs:us-west-2:860061945305:task-definition/docker-demo:2"
         LoadBalancerInfo:
-          ContainerName: "dh-first-demo-repo"
+          ContainerName: "docker-demo"
           ContainerPort: "8200"
         PlatformVersion: "LATEST"

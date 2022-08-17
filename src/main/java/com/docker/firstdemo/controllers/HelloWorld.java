@@ -12,7 +12,7 @@ public class HelloWorld {
 	
 	@RequestMapping(value = "/intro", method = RequestMethod.GET)
 	public MessageStyle getMessage() {
-		return new MessageStyle("Hello World");
+		return new MessageStyle("Successfully completed ci/cd");
 	}
 
 }

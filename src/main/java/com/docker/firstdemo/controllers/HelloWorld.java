@@ -12,7 +12,7 @@ public class HelloWorld {
 	
 	@RequestMapping(value = "/intro", method = RequestMethod.GET)
 	public MessageStyle getMessage() {
-		return new MessageStyle("Welcome to the world of AWS :)");
+		return new MessageStyle("Welcome to the world of AWS :), Hope everything is working fine");
 	}
 
 }
